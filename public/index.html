@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LINE Webhook Monitor</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📱 LINE Webhook Monitor</h1>
+            <p class="subtitle">Real-time file processing from LINE & LINE WORKS to Google Drive</p>
+        </header>
+        
+        <div class="control-panel">
+            <button id="startBtn" class="btn-start">
+                <span class="btn-icon">▶️</span>
+                <span class="btn-text">START MONITORING</span>
+            </button>
+            <div id="status" class="status">
+                <span class="status-dot"></span>
+                <span class="status-text">Ready to start</span>
+            </div>
+        </div>
+
+        <div class="card logs-card">
+            <div class="logs-header">
+                <h2>📊 Activity Logs</h2>
+                <button id="clearLogs" class="btn-clear">Clear</button>
+            </div>
+            <div id="logs" class="logs-container">
+                <div class="log-entry info">
+                    <span class="log-time">--:--:--</span>
+                    <span class="log-message">Waiting for START...</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>📋 Configuration</h2>
+            <div id="configInfo" class="config-info">
+                <div class="info-row">
+                    <span class="info-label">LINE WORKS Webhook:</span>
+                    <code class="info-value">http://localhost:3000/webhooks/lineworks</code>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
